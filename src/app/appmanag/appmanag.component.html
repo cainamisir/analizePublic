@@ -1,0 +1,51 @@
+<!--This page will be an "appointment manager page"
+    It will be a table, with an edit button (which has an edit icon) and a delete button (which has a delete icon) on each row
+    The table will have the following columns:
+    Id, Created At, Time, Location, Client Email, Price.
+    The edit button will open a popup with all the fields of the appointment, and a save button.
+    The delete button will delete the appointment after a delete pop up shows up.
+    The table will be sorted by the created at column, in descending order.
+    This is an angular html file and will use angular material
+-->
+<div class="page-wrapper">
+    <!-- Header should have an inline style centering it and implementing a simple effect-->
+    <h1 style="text-align: center;">Appointment Manager</h1>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 table">
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> Id </th>
+            <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="createdAt">
+            <th mat-header-cell *matHeaderCellDef> Created At </th>
+            <td mat-cell *matCellDef="let element"> {{element.created_at}} </td>
+        </ng-container>
+        <ng-container matColumnDef="time">
+            <th mat-header-cell *matHeaderCellDef> Time </th>
+            <td mat-cell *matCellDef="let element"> {{element.time}} </td>
+        </ng-container>
+        <ng-container matColumnDef="location">
+            <th mat-header-cell *matHeaderCellDef> Location </th>
+            <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+        </ng-container>
+        <ng-container matColumnDef="clientEmail">
+            <th mat-header-cell *matHeaderCellDef> Client Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.client_email}} </td>
+        </ng-container>
+        <ng-container matColumnDef="price">
+            <th mat-header-cell *matHeaderCellDef> Price </th>
+            <td mat-cell *matCellDef="let element"> {{element.sum}} </td>
+        </ng-container>
+        <ng-container matColumnDef="edit">
+            <th mat-header-cell *matHeaderCellDef> Edit </th>
+            <td mat-cell *matCellDef="let element"> <button mat-icon-button (click)="openEditDialog(element)"><mat-icon>edit</mat-icon></button> </td>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef> Delete </th>
+            <td mat-cell *matCellDef="let element"> <button mat-icon-button (click)="openDeleteDialog(element)"><mat-icon>delete</mat-icon></button> </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    
+
+</div>

@@ -1,0 +1,43 @@
+/* src/app/header/header.component.scss */
+header {
+    // fancy effect on the header, like some shadows and a gradient
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    // effect on font
+
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    nav {
+      /* Add styling for navigation links if needed */
+    }
+  }
+  
+  .header {
+    font-family: "Poppins", sans-serif;
+    font-size: 36px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .header::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: (var(--primary-color));
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .header:hover::after {
+    transform: scaleX(1);
+  }

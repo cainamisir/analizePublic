@@ -1,0 +1,35 @@
+<h2 class="header-title">Edit Appointment</h2>
+<div>
+  <form>
+    <!-- Add form fields for editing appointment properties and labels for each -->
+    
+    <mat-form-field style="width: 90%;">
+      <mat-label>Id</mat-label>
+      <input matInput placeholder="ID" [(ngModel)]="data.appointment.id" disabled name="Id">
+    </mat-form-field>
+    <mat-form-field style="width: 90%;">
+      <mat-label>Created At</mat-label>
+      <input matInput placeholder="Created At" [(ngModel)]="data.appointment.created_at" name="createdAt">
+    </mat-form-field>
+    <mat-form-field style="width: 90%;">
+      <mat-label>Time</mat-label>
+      <input matInput placeholder="Time" [(ngModel)]="data.appointment.time" name="time">
+    </mat-form-field>
+    <mat-form-field style="width: 90%;">
+      <mat-label>Location</mat-label>
+      <input matInput placeholder="Location" [(ngModel)]="data.appointment.location" name="location">
+    </mat-form-field>
+    <mat-form-field style="width: 90%;">
+      <mat-label>Client Email</mat-label>
+      <input matInput placeholder="Client Email" [(ngModel)]="data.appointment.client_email" name="email">
+    </mat-form-field>
+    <mat-form-field style="width: 90%;">
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="Price" [(ngModel)]="data.appointment.sum" name="sum">
+    </mat-form-field>
+  </form>
+  <div style="width: 100%; display: flex; justify-content: space-evenly;">
+      <button mat-button (click)="onSaveClick()" class="form-button save">Save</button>
+      <button mat-button (click)="onCancelClick()" class="form-button cancel">Cancel</button>
+  </div>
+</div>

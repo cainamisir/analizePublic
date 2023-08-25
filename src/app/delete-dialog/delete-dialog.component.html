@@ -1,0 +1,21 @@
+<h2 style="text-align: center;">Confirm Deletion</h2>
+<div>
+  <p style="text-align: center;">Are you sure you want to delete this appointment?</p>
+  <!-- display appointment properties in a minimalistic way-->
+  <div class="appointment">
+    <p class="info"><span>ID:</span> {{data.appointment.id}}</p>
+    <p class="info"><span>Created At:</span> {{data.appointment.created_at}}</p>
+    <p class="info"><span>Time:</span> {{data.appointment.time}}</p>
+    <p class="info"><span>Location:</span> {{data.appointment.location}}</p>
+    <p class="info"><span>Client Email:</span> {{data.appointment.client_email}}</p>
+    <p class="info"><span>Price:</span> {{data.appointment.sum}}</p>
+  </div>
+
+
+
+
+  <div style="display: flex; justify-content: space-evenly; margin: 2em;">
+  <button mat-button (click)="onDeleteClick()" class="delete-button">Delete</button>
+  <button mat-button (click)="onCancelClick()" class="cancel-button">Cancel</button>
+  </div>
+</div>

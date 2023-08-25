@@ -1,0 +1,51 @@
+.header-title{
+    // should also be centered
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 1em;
+
+}
+form{
+    // should be centered
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+    
+}
+.form-button{
+    // should be centered in the middle and have some paddings
+    display: inline-flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 40%;
+    height: 100%;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    background-color: #93a3ff;
+    color: white !important;
+    font-size: 1.2em;
+    cursor: pointer;
+    &:hover{
+        background-color: #303f9f;
+    }
+    
+}
+.save{
+    background-color: #93a3ff;
+    &:hover{
+        background-color: #303f9f;
+    }
+}
+.cancel{
+    background-color: #ff746a;
+    &:hover{
+        background-color: #d32f2f;
+    }
+}

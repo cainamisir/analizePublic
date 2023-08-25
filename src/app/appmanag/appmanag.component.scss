@@ -1,0 +1,46 @@
+.page-wrapper{
+    padding: 3em;
+    h1{
+        // cool title effect on some background (red related)
+        background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2em;
+        font-weight: 700;
+        margin-bottom: 1em;
+
+    }
+    .table{
+        // make the mat-table look modern and minimalist with different background for alternating rows
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        overflow: hidden;
+        width: 100%;
+        margin: 0 auto;
+        display: table;
+        .mat-row:nth-child(odd){
+            background-color: #f5f5f5;
+        }
+        .mat-row:nth-child(even){
+            background-color: #fff;
+        }
+        .mat-header-row{
+            background-color: #f5f5f5;
+        }
+        .mat-cell, .mat-header-cell{
+            padding: 1em;
+            text-align: center;
+        }
+        .mat-cell{
+            border-bottom: 1px solid #ddd;
+        }
+        .mat-header-cell{
+            font-weight: 700;
+        }
+        
+
+        
+
+    }
+}
